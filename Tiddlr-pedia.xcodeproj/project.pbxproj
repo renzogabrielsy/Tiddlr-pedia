@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9EBFF212B05B3AF004BD3E1 /* Tiddlr_pediaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBFF202B05B3AF004BD3E1 /* Tiddlr_pediaApp.swift */; };
+		C9EBFF232B05B3AF004BD3E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBFF222B05B3AF004BD3E1 /* ContentView.swift */; };
+		C9EBFF252B05B3B1004BD3E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EBFF242B05B3B1004BD3E1 /* Assets.xcassets */; };
+		C9EBFF282B05B3B1004BD3E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EBFF272B05B3B1004BD3E1 /* Preview Assets.xcassets */; };
+		C9EBFF322B05B3B1004BD3E1 /* Tiddlr_pediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBFF312B05B3B1004BD3E1 /* Tiddlr_pediaTests.swift */; };
+		C9EBFF3C2B05B3B1004BD3E1 /* Tiddlr_pediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBFF3B2B05B3B1004BD3E1 /* Tiddlr_pediaUITests.swift */; };
+		C9EBFF3E2B05B3B1004BD3E1 /* Tiddlr_pediaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBFF3D2B05B3B1004BD3E1 /* Tiddlr_pediaUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9EBFF2E2B05B3B1004BD3E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9EBFF152B05B3AF004BD3E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9EBFF1C2B05B3AF004BD3E1;
+			remoteInfo = "Tiddlr-pedia";
+		};
+		C9EBFF382B05B3B1004BD3E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9EBFF152B05B3AF004BD3E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9EBFF1C2B05B3AF004BD3E1;
+			remoteInfo = "Tiddlr-pedia";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C9EBFF1D2B05B3AF004BD3E1 /* Tiddlr-pedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiddlr-pedia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9EBFF202B05B3AF004BD3E1 /* Tiddlr_pediaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiddlr_pediaApp.swift; sourceTree = "<group>"; };
+		C9EBFF222B05B3AF004BD3E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C9EBFF242B05B3B1004BD3E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9EBFF272B05B3B1004BD3E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C9EBFF2D2B05B3B1004BD3E1 /* Tiddlr-pediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tiddlr-pediaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9EBFF312B05B3B1004BD3E1 /* Tiddlr_pediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiddlr_pediaTests.swift; sourceTree = "<group>"; };
+		C9EBFF372B05B3B1004BD3E1 /* Tiddlr-pediaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tiddlr-pediaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9EBFF3B2B05B3B1004BD3E1 /* Tiddlr_pediaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiddlr_pediaUITests.swift; sourceTree = "<group>"; };
+		C9EBFF3D2B05B3B1004BD3E1 /* Tiddlr_pediaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiddlr_pediaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9EBFF1A2B05B3AF004BD3E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EBFF2A2B05B3B1004BD3E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EBFF342B05B3B1004BD3E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9EBFF142B05B3AF004BD3E1 = {
+			isa = PBXGroup;
+			children = (
+				C9EBFF1F2B05B3AF004BD3E1 /* Tiddlr-pedia */,
+				C9EBFF302B05B3B1004BD3E1 /* Tiddlr-pediaTests */,
+				C9EBFF3A2B05B3B1004BD3E1 /* Tiddlr-pediaUITests */,
+				C9EBFF1E2B05B3AF004BD3E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9EBFF1E2B05B3AF004BD3E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9EBFF1D2B05B3AF004BD3E1 /* Tiddlr-pedia.app */,
+				C9EBFF2D2B05B3B1004BD3E1 /* Tiddlr-pediaTests.xctest */,
+				C9EBFF372B05B3B1004BD3E1 /* Tiddlr-pediaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9EBFF1F2B05B3AF004BD3E1 /* Tiddlr-pedia */ = {
+			isa = PBXGroup;
+			children = (
+				C9EBFF202B05B3AF004BD3E1 /* Tiddlr_pediaApp.swift */,
+				C9EBFF222B05B3AF004BD3E1 /* ContentView.swift */,
+				C9EBFF242B05B3B1004BD3E1 /* Assets.xcassets */,
+				C9EBFF262B05B3B1004BD3E1 /* Preview Content */,
+			);
+			path = "Tiddlr-pedia";
+			sourceTree = "<group>";
+		};
+		C9EBFF262B05B3B1004BD3E1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C9EBFF272B05B3B1004BD3E1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C9EBFF302B05B3B1004BD3E1 /* Tiddlr-pediaTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9EBFF312B05B3B1004BD3E1 /* Tiddlr_pediaTests.swift */,
+			);
+			path = "Tiddlr-pediaTests";
+			sourceTree = "<group>";
+		};
+		C9EBFF3A2B05B3B1004BD3E1 /* Tiddlr-pediaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C9EBFF3B2B05B3B1004BD3E1 /* Tiddlr_pediaUITests.swift */,
+				C9EBFF3D2B05B3B1004BD3E1 /* Tiddlr_pediaUITestsLaunchTests.swift */,
+			);
+			path = "Tiddlr-pediaUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9EBFF1C2B05B3AF004BD3E1 /* Tiddlr-pedia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9EBFF412B05B3B1004BD3E1 /* Build configuration list for PBXNativeTarget "Tiddlr-pedia" */;
+			buildPhases = (
+				C9EBFF192B05B3AF004BD3E1 /* Sources */,
+				C9EBFF1A2B05B3AF004BD3E1 /* Frameworks */,
+				C9EBFF1B2B05B3AF004BD3E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tiddlr-pedia";
+			productName = "Tiddlr-pedia";
+			productReference = C9EBFF1D2B05B3AF004BD3E1 /* Tiddlr-pedia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9EBFF2C2B05B3B1004BD3E1 /* Tiddlr-pediaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9EBFF442B05B3B1004BD3E1 /* Build configuration list for PBXNativeTarget "Tiddlr-pediaTests" */;
+			buildPhases = (
+				C9EBFF292B05B3B1004BD3E1 /* Sources */,
+				C9EBFF2A2B05B3B1004BD3E1 /* Frameworks */,
+				C9EBFF2B2B05B3B1004BD3E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9EBFF2F2B05B3B1004BD3E1 /* PBXTargetDependency */,
+			);
+			name = "Tiddlr-pediaTests";
+			productName = "Tiddlr-pediaTests";
+			productReference = C9EBFF2D2B05B3B1004BD3E1 /* Tiddlr-pediaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9EBFF362B05B3B1004BD3E1 /* Tiddlr-pediaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9EBFF472B05B3B1004BD3E1 /* Build configuration list for PBXNativeTarget "Tiddlr-pediaUITests" */;
+			buildPhases = (
+				C9EBFF332B05B3B1004BD3E1 /* Sources */,
+				C9EBFF342B05B3B1004BD3E1 /* Frameworks */,
+				C9EBFF352B05B3B1004BD3E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9EBFF392B05B3B1004BD3E1 /* PBXTargetDependency */,
+			);
+			name = "Tiddlr-pediaUITests";
+			productName = "Tiddlr-pediaUITests";
+			productReference = C9EBFF372B05B3B1004BD3E1 /* Tiddlr-pediaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9EBFF152B05B3AF004BD3E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					C9EBFF1C2B05B3AF004BD3E1 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					C9EBFF2C2B05B3B1004BD3E1 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = C9EBFF1C2B05B3AF004BD3E1;
+					};
+					C9EBFF362B05B3B1004BD3E1 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = C9EBFF1C2B05B3AF004BD3E1;
+					};
+				};
+			};
+			buildConfigurationList = C9EBFF182B05B3AF004BD3E1 /* Build configuration list for PBXProject "Tiddlr-pedia" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9EBFF142B05B3AF004BD3E1;
+			productRefGroup = C9EBFF1E2B05B3AF004BD3E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9EBFF1C2B05B3AF004BD3E1 /* Tiddlr-pedia */,
+				C9EBFF2C2B05B3B1004BD3E1 /* Tiddlr-pediaTests */,
+				C9EBFF362B05B3B1004BD3E1 /* Tiddlr-pediaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9EBFF1B2B05B3AF004BD3E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EBFF282B05B3B1004BD3E1 /* Preview Assets.xcassets in Resources */,
+				C9EBFF252B05B3B1004BD3E1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EBFF2B2B05B3B1004BD3E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EBFF352B05B3B1004BD3E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9EBFF192B05B3AF004BD3E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EBFF232B05B3AF004BD3E1 /* ContentView.swift in Sources */,
+				C9EBFF212B05B3AF004BD3E1 /* Tiddlr_pediaApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EBFF292B05B3B1004BD3E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EBFF322B05B3B1004BD3E1 /* Tiddlr_pediaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9EBFF332B05B3B1004BD3E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EBFF3C2B05B3B1004BD3E1 /* Tiddlr_pediaUITests.swift in Sources */,
+				C9EBFF3E2B05B3B1004BD3E1 /* Tiddlr_pediaUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9EBFF2F2B05B3B1004BD3E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9EBFF1C2B05B3AF004BD3E1 /* Tiddlr-pedia */;
+			targetProxy = C9EBFF2E2B05B3B1004BD3E1 /* PBXContainerItemProxy */;
+		};
+		C9EBFF392B05B3B1004BD3E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9EBFF1C2B05B3AF004BD3E1 /* Tiddlr-pedia */;
+			targetProxy = C9EBFF382B05B3B1004BD3E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C9EBFF3F2B05B3B1004BD3E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C9EBFF402B05B3B1004BD3E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9EBFF422B05B3B1004BD3E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Tiddlr-pedia/Preview Content\"";
+				DEVELOPMENT_TEAM = 532Q7XUA75;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "renzosy.Tiddlr-pedia";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9EBFF432B05B3B1004BD3E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Tiddlr-pedia/Preview Content\"";
+				DEVELOPMENT_TEAM = 532Q7XUA75;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "renzosy.Tiddlr-pedia";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C9EBFF452B05B3B1004BD3E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 532Q7XUA75;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "renzosy.Tiddlr-pediaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tiddlr-pedia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tiddlr-pedia";
+			};
+			name = Debug;
+		};
+		C9EBFF462B05B3B1004BD3E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 532Q7XUA75;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "renzosy.Tiddlr-pediaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tiddlr-pedia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tiddlr-pedia";
+			};
+			name = Release;
+		};
+		C9EBFF482B05B3B1004BD3E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 532Q7XUA75;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "renzosy.Tiddlr-pediaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tiddlr-pedia";
+			};
+			name = Debug;
+		};
+		C9EBFF492B05B3B1004BD3E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 532Q7XUA75;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "renzosy.Tiddlr-pediaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tiddlr-pedia";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9EBFF182B05B3AF004BD3E1 /* Build configuration list for PBXProject "Tiddlr-pedia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9EBFF3F2B05B3B1004BD3E1 /* Debug */,
+				C9EBFF402B05B3B1004BD3E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9EBFF412B05B3B1004BD3E1 /* Build configuration list for PBXNativeTarget "Tiddlr-pedia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9EBFF422B05B3B1004BD3E1 /* Debug */,
+				C9EBFF432B05B3B1004BD3E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9EBFF442B05B3B1004BD3E1 /* Build configuration list for PBXNativeTarget "Tiddlr-pediaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9EBFF452B05B3B1004BD3E1 /* Debug */,
+				C9EBFF462B05B3B1004BD3E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9EBFF472B05B3B1004BD3E1 /* Build configuration list for PBXNativeTarget "Tiddlr-pediaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9EBFF482B05B3B1004BD3E1 /* Debug */,
+				C9EBFF492B05B3B1004BD3E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9EBFF152B05B3AF004BD3E1 /* Project object */;
+}
