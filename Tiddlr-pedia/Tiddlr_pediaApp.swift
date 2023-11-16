@@ -11,7 +11,7 @@ import SwiftUI
 struct Tiddlr_pediaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Home()
         }
     }
 }

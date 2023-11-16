@@ -1,24 +1,25 @@
 //
 //  ContentView.swift
-//  Tiddlr-pedia
+//  Test Calculator
 //
-//  Created by Renzo Sy on 11/16/23.
+//  Created by Renzo Sy on 11/14/23.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct CalcAD_View: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Calc 2")
         }
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    CalcAD_View()
 }
+
