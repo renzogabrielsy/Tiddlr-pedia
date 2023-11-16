@@ -1,7 +1,7 @@
 import SwiftUI
 
 enum DosageCalculationType: String, CaseIterable, Identifiable, Hashable {
-    case perDay = "mg/kg/day"
+    case perDay = "mg/kg/Day"
     case perDose = "mg/kg/dose"
     
     var id: String { self.rawValue }
@@ -109,7 +109,7 @@ struct CalcGD_View: View {
                         Text(gdRange != nil ? "\(gdRange!.min, specifier: "%.2f")" : "--")
                             .foregroundColor(gdRange != nil ? .primary : .secondary)
                             .padding(.trailing, 10)
-                        Text(calculationType == .perDay ? "mg/kg/day" : "mg/kg/dose")
+                        Text(medicationForm == .solid ? "mg/dose" : "mL/dose")
                             .padding(.trailing, 10)
                     }
                     
@@ -120,7 +120,7 @@ struct CalcGD_View: View {
                         Text(gdRange != nil ? "\(gdRange!.max, specifier: "%.2f")" : "--")
                             .foregroundColor(gdRange != nil ? .primary : .secondary)
                             .padding(.trailing, 10)
-                        Text(calculationType == .perDay ? "mg/kg/day" : "mg/kg/dose")
+                        Text(medicationForm == .solid ? "mg/dose" : "mL/dose")
                             .padding(.trailing, 10)
                     }
                 }
@@ -157,13 +157,36 @@ struct CalcGD_View: View {
                         }
                         .pickerStyle(SegmentedPickerStyle())
                         if medicationForm == .liquid {
-                            TextField("mg", text: $preparationMg)
+                            TextField("", text: $preparationMg)
                                 .keyboardType(.decimalPad)
-                            TextField("mL", text: $preparationMl)
+                                .overlay(
+                                    HStack {
+                                        Spacer()
+                                        Text("mg")
+                                            .padding(.trailing, 10)
+                                    }, alignment: .trailing
+                                )
+                            TextField("--", text: $preparationMl)
                                 .keyboardType(.decimalPad)
+                                .overlay(
+                                    HStack {
+                                        Spacer()
+                                        Text("mL")
+                                            .padding(.trailing, 10)
+                                    }, alignment: .trailing
+                                )
+                            
                         } else {
-                            TextField("mg", text: $preparationMg)
+                            TextField("--", text: $preparationMg)
                                 .keyboardType(.decimalPad)
+                                .overlay(
+                                    HStack {
+                                        Spacer()
+                                        Text("mg")
+                                            .padding(.trailing, 10)
+                                    }, alignment: .trailing
+                                )
+                                
                         }
                     }
                 }
