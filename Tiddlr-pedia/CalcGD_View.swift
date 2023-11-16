@@ -36,6 +36,20 @@ extension Medication: Hashable {
     }
 }
 
+enum AdministrationRoute: String, CaseIterable, Identifiable {
+    case oral = "Oral"
+    case intravenous = "Intravenous"
+    
+    var id: String { self.rawValue }
+}
+
+enum MedicationForm: String, CaseIterable, Identifiable {
+    case solid = "Solid"
+    case liquid = "Liquid"
+
+    var id: String { self.rawValue }
+}
+
 struct CalcGD_View: View {
     @State private var weight: String = ""
     @State private var selectedMedication: Medication?
@@ -43,6 +57,12 @@ struct CalcGD_View: View {
     @State private var maxDosage: String = ""
     @State private var frequency: String = "1"
     @State private var calculationType: DosageCalculationType = .perDose
+    @State private var administrationRoute: AdministrationRoute = .oral
+    @State private var medicationForm: MedicationForm = .solid
+    @State private var preparationMg: String = "" // For solid form
+    @State private var preparationMl: String = "" // For liquid form
+
+
     
     let medications: [Medication] = [
         Medication(name: "Paracetamol", dosageRange: (10, 15), defaultCalculationType: .perDose),
@@ -52,46 +72,58 @@ struct CalcGD_View: View {
     ]
     
     private var gdRange: (min: Double, max: Double)? {
-            guard let weightValue = Double(weight),
-                  let minDosageValue = Double(minDosage),
-                  let maxDosageValue = Double(maxDosage),
-                  !weightValue.isZero else { return nil }
-
-            let frequencyValue = Double(frequency) ?? 1
-            let minGD = minDosageValue * weightValue / (calculationType == .perDay ? frequencyValue : 1)
-            let maxGD = maxDosageValue * weightValue / (calculationType == .perDay ? frequencyValue : 1)
-
-            return (minGD, maxGD)
+        // Ensure all values are valid doubles and the weight is not zero
+        guard let weightValue = Double(weight),
+              let minDosageValue = Double(minDosage),
+              let maxDosageValue = Double(maxDosage),
+              !weightValue.isZero else { return nil }
+        
+        let frequencyValue = Double(frequency) ?? 1
+        let preparationValue = medicationForm == .solid ? Double(preparationMg) ?? 1 : (Double(preparationMg) ?? 1) / (Double(preparationMl) ?? 1)
+        let minGD: Double
+        let maxGD: Double
+        
+        // Use the appropriate formula based on the administration route
+        if administrationRoute == .oral {
+            minGD = (minDosageValue * weightValue * (1 / preparationValue)) / frequencyValue
+            maxGD = (maxDosageValue * weightValue * (1 / preparationValue)) / frequencyValue
+        } else { // For .intravenous or other routes
+            minGD = (minDosageValue * weightValue) / frequencyValue
+            maxGD = (maxDosageValue * weightValue) / frequencyValue
         }
 
-
+        return (minGD, maxGD)
+    }
+    
+    
     var body: some View {
+        
         NavigationView {
             Form {
                 
                 Section(header: Text("Given Dose Range")) {
-                                    HStack {
-                                        Text("Min GD: ")
-                                        Spacer()
-                                        // Display the calculated value or placeholder
-                                        Text(gdRange != nil ? "\(gdRange!.min, specifier: "%.2f")" : "--")
-                                            .foregroundColor(gdRange != nil ? .primary : .secondary)
-                                            .padding(.trailing, 10)
-                                        Text(calculationType == .perDay ? "mg/kg/day" : "mg/kg/dose")
-                                            .padding(.trailing, 10)
-                                    }
-                                    
-                                    HStack {
-                                        Text("Max GD: ")
-                                        Spacer()
-                                        // Display the calculated value or placeholder
-                                        Text(gdRange != nil ? "\(gdRange!.max, specifier: "%.2f")" : "--")
-                                            .foregroundColor(gdRange != nil ? .primary : .secondary)
-                                            .padding(.trailing, 10)
-                                        Text(calculationType == .perDay ? "mg/kg/day" : "mg/kg/dose")
-                                            .padding(.trailing, 10)
-                                    }
-                                }
+                    HStack {
+                        Text("Min GD: ")
+                        Spacer()
+                        // Display the calculated value or placeholder
+                        Text(gdRange != nil ? "\(gdRange!.min, specifier: "%.2f")" : "--")
+                            .foregroundColor(gdRange != nil ? .primary : .secondary)
+                            .padding(.trailing, 10)
+                        Text(calculationType == .perDay ? "mg/kg/day" : "mg/kg/dose")
+                            .padding(.trailing, 10)
+                    }
+                    
+                    HStack {
+                        Text("Max GD: ")
+                        Spacer()
+                        // Display the calculated value or placeholder
+                        Text(gdRange != nil ? "\(gdRange!.max, specifier: "%.2f")" : "--")
+                            .foregroundColor(gdRange != nil ? .primary : .secondary)
+                            .padding(.trailing, 10)
+                        Text(calculationType == .perDay ? "mg/kg/day" : "mg/kg/dose")
+                            .padding(.trailing, 10)
+                    }
+                }
                 
                 Section(header: Text("Medication")) {
                     Picker("Select Medication", selection: $selectedMedication) {
@@ -111,11 +143,29 @@ struct CalcGD_View: View {
                             Text(type.rawValue).tag(type)
                         }
                     }.pickerStyle(SegmentedPickerStyle())
-                }
-                
-                
-                Section(header: Text("Preparation")) {
-                    
+                    Picker("Administration Route", selection: $administrationRoute) {
+                        ForEach(AdministrationRoute.allCases) { route in
+                            Text(route.rawValue).tag(route)
+                        }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    if administrationRoute == .oral {
+                        Picker("Form", selection: $medicationForm) {
+                            ForEach(MedicationForm.allCases) { form in
+                                Text(form.rawValue).tag(form)
+                            }
+                        }
+                        .pickerStyle(SegmentedPickerStyle())
+                        if medicationForm == .liquid {
+                            TextField("mg", text: $preparationMg)
+                                .keyboardType(.decimalPad)
+                            TextField("mL", text: $preparationMl)
+                                .keyboardType(.decimalPad)
+                        } else {
+                            TextField("mg", text: $preparationMg)
+                                .keyboardType(.decimalPad)
+                        }
+                    }
                 }
                 
                 Section(header: Text("Recommended Dosage")) {
@@ -128,7 +178,7 @@ struct CalcGD_View: View {
                                     .padding(.trailing, 10)
                             }, alignment: .trailing
                         )
-
+                    
                     TextField("Max Dosage", text: $maxDosage)
                         .keyboardType(.decimalPad)
                         .overlay(
@@ -150,7 +200,7 @@ struct CalcGD_View: View {
                                     .padding(.trailing, 10)
                             }, alignment: .trailing
                         )
-
+                    
                     if calculationType == .perDay {
                         TextField("Frequency", text: $frequency)
                             .keyboardType(.numberPad)
@@ -175,6 +225,10 @@ struct CalcGD_View: View {
         minDosage = String(format: "%.2f", newMedication.dosageRange.min)
         maxDosage = String(format: "%.2f", newMedication.dosageRange.max)
     }
+    
+    
+    
+    
 }
 
 extension View {
