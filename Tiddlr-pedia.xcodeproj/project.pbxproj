@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C9EBFF212B05B3AF004BD3E1 /* Tiddlr_pediaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBFF202B05B3AF004BD3E1 /* Tiddlr_pediaApp.swift */; };
-		C9EBFF232B05B3AF004BD3E1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBFF222B05B3AF004BD3E1 /* Home.swift */; };
+		C9EBFF232B05B3AF004BD3E1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBFF222B05B3AF004BD3E1 /* HomeView.swift */; };
 		C9EBFF252B05B3B1004BD3E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EBFF242B05B3B1004BD3E1 /* Assets.xcassets */; };
 		C9EBFF282B05B3B1004BD3E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9EBFF272B05B3B1004BD3E1 /* Preview Assets.xcassets */; };
 		C9EBFF322B05B3B1004BD3E1 /* Tiddlr_pediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBFF312B05B3B1004BD3E1 /* Tiddlr_pediaTests.swift */; };
@@ -16,6 +16,9 @@
 		C9EBFF3E2B05B3B1004BD3E1 /* Tiddlr_pediaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBFF3D2B05B3B1004BD3E1 /* Tiddlr_pediaUITestsLaunchTests.swift */; };
 		C9EBFF4B2B05B434004BD3E1 /* CalcGD_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBFF4A2B05B434004BD3E1 /* CalcGD_View.swift */; };
 		C9EBFF4D2B05B4AA004BD3E1 /* CalcAD_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBFF4C2B05B4AA004BD3E1 /* CalcAD_View.swift */; };
+		C9EBFF892B06E2D2004BD3E1 /* Medications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBFF882B06E2D2004BD3E1 /* Medications.swift */; };
+		C9EBFF8B2B06E4F0004BD3E1 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBFF8A2B06E4F0004BD3E1 /* Enums.swift */; };
+		C9EBFF8D2B06E69E004BD3E1 /* GDCalc_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EBFF8C2B06E69E004BD3E1 /* GDCalc_ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,7 @@
 /* Begin PBXFileReference section */
 		C9EBFF1D2B05B3AF004BD3E1 /* Tiddlr-pedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiddlr-pedia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EBFF202B05B3AF004BD3E1 /* Tiddlr_pediaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiddlr_pediaApp.swift; sourceTree = "<group>"; };
-		C9EBFF222B05B3AF004BD3E1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		C9EBFF222B05B3AF004BD3E1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C9EBFF242B05B3B1004BD3E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9EBFF272B05B3B1004BD3E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C9EBFF2D2B05B3B1004BD3E1 /* Tiddlr-pediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tiddlr-pediaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +51,9 @@
 		C9EBFF3D2B05B3B1004BD3E1 /* Tiddlr_pediaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiddlr_pediaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C9EBFF4A2B05B434004BD3E1 /* CalcGD_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcGD_View.swift; sourceTree = "<group>"; };
 		C9EBFF4C2B05B4AA004BD3E1 /* CalcAD_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcAD_View.swift; sourceTree = "<group>"; };
+		C9EBFF882B06E2D2004BD3E1 /* Medications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medications.swift; sourceTree = "<group>"; };
+		C9EBFF8A2B06E4F0004BD3E1 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		C9EBFF8C2B06E69E004BD3E1 /* GDCalc_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCalc_ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +104,10 @@
 		C9EBFF1F2B05B3AF004BD3E1 /* Tiddlr-pedia */ = {
 			isa = PBXGroup;
 			children = (
-				C9EBFF4C2B05B4AA004BD3E1 /* CalcAD_View.swift */,
-				C9EBFF4A2B05B434004BD3E1 /* CalcGD_View.swift */,
+				C9EBFF852B06DDEC004BD3E1 /* Model */,
+				C9EBFF872B06DE06004BD3E1 /* ViewModel */,
+				C9EBFF862B06DDF6004BD3E1 /* View */,
 				C9EBFF202B05B3AF004BD3E1 /* Tiddlr_pediaApp.swift */,
-				C9EBFF222B05B3AF004BD3E1 /* Home.swift */,
 				C9EBFF242B05B3B1004BD3E1 /* Assets.xcassets */,
 				C9EBFF262B05B3B1004BD3E1 /* Preview Content */,
 			);
@@ -131,6 +137,33 @@
 				C9EBFF3D2B05B3B1004BD3E1 /* Tiddlr_pediaUITestsLaunchTests.swift */,
 			);
 			path = "Tiddlr-pediaUITests";
+			sourceTree = "<group>";
+		};
+		C9EBFF852B06DDEC004BD3E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9EBFF882B06E2D2004BD3E1 /* Medications.swift */,
+				C9EBFF8A2B06E4F0004BD3E1 /* Enums.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C9EBFF862B06DDF6004BD3E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9EBFF222B05B3AF004BD3E1 /* HomeView.swift */,
+				C9EBFF4C2B05B4AA004BD3E1 /* CalcAD_View.swift */,
+				C9EBFF4A2B05B434004BD3E1 /* CalcGD_View.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9EBFF872B06DE06004BD3E1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C9EBFF8C2B06E69E004BD3E1 /* GDCalc_ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,10 +296,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9EBFF232B05B3AF004BD3E1 /* Home.swift in Sources */,
+				C9EBFF232B05B3AF004BD3E1 /* HomeView.swift in Sources */,
 				C9EBFF4B2B05B434004BD3E1 /* CalcGD_View.swift in Sources */,
 				C9EBFF4D2B05B4AA004BD3E1 /* CalcAD_View.swift in Sources */,
+				C9EBFF892B06E2D2004BD3E1 /* Medications.swift in Sources */,
+				C9EBFF8B2B06E4F0004BD3E1 /* Enums.swift in Sources */,
 				C9EBFF212B05B3AF004BD3E1 /* Tiddlr_pediaApp.swift in Sources */,
+				C9EBFF8D2B06E69E004BD3E1 /* GDCalc_ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
