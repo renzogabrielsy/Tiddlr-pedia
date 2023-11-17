@@ -7,9 +7,9 @@ struct CalcGD_View: View {
         
         NavigationView {
             Form {
-                
                 Section(header: Text("Given Dose Range")) {
                     HStack {
+                        Image(systemName: "drop.fill")
                         Text("Min GD: ")
                         Spacer()
                         // Display the calculated value or placeholder
@@ -21,6 +21,7 @@ struct CalcGD_View: View {
                     }
                     
                     HStack {
+                        Image(systemName: "drop.fill")
                         Text("Max GD: ")
                         Spacer()
                         // Display the calculated value or placeholder
@@ -33,68 +34,80 @@ struct CalcGD_View: View {
                 }
                 
                 Section(header: Text("Medication")) {
-                    Picker("Select Medication", selection: $viewModel.selectedMedication) {
-                        ForEach(viewModel.medications, id: \.self) { medication in
-                            Text(medication.name).tag(medication as Medication?)
+                    
+                    VStack{
+                        HStack{
+                            Image(systemName: "tablet")
+                            Picker("Select Medication", selection: $viewModel.selectedMedication) {
+                                ForEach(viewModel.medications, id: \.self) { medication in
+                                    Text(medication.name).tag(medication as Medication?)
+                                }
+                            }
+                            .pickerStyle(MenuPickerStyle())
+                            .onChange(of: viewModel.selectedMedication) { newValue in
+                                if let newMedication = newValue {
+                                    viewModel.calculationType = newMedication.defaultCalculationType
+                                    viewModel.updateDosageRange(to: newMedication)
+                                }
+                            }
                         }
-                    }
-                    .pickerStyle(MenuPickerStyle())
-                    .onChange(of: viewModel.selectedMedication) { newValue in
-                        if let newMedication = newValue {
-                            viewModel.calculationType = newMedication.defaultCalculationType
-                            viewModel.updateDosageRange(to: newMedication)
-                        }
-                    }
-                    Picker("Dosage Calculation Type", selection: $viewModel.calculationType) {
-                        ForEach(DosageCalculationType.allCases) { type in
-                            Text(type.rawValue).tag(type)
-                        }
-                    }.pickerStyle(SegmentedPickerStyle())
-                    Picker("Administration Route", selection: $viewModel.administrationRoute) {
-                        ForEach(AdministrationRoute.allCases) { route in
-                            Text(route.rawValue).tag(route)
-                        }
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-                    if viewModel.administrationRoute == .oral {
-                        Picker("Form", selection: $viewModel.medicationForm) {
-                            ForEach(MedicationForm.allCases) { form in
-                                Text(form.rawValue).tag(form)
+                        
+                        Picker("Dosage Calculation Type", selection: $viewModel.calculationType) {
+                            ForEach(DosageCalculationType.allCases) { type in
+                                Text(type.rawValue).tag(type)
+                            }
+                        }.pickerStyle(SegmentedPickerStyle())
+                        Picker("Administration Route", selection: $viewModel.administrationRoute) {
+                            ForEach(AdministrationRoute.allCases) { route in
+                                Text(route.rawValue).tag(route)
                             }
                         }
                         .pickerStyle(SegmentedPickerStyle())
-                        if viewModel.medicationForm == .liquid {
-                            TextField("", text: $viewModel.preparationMg)
-                                .keyboardType(.decimalPad)
-                                .overlay(
-                                    HStack {
-                                        Spacer()
-                                        Text("mg")
-                                            .padding(.trailing, 10)
-                                    }, alignment: .trailing
-                                )
-                            TextField("--", text: $viewModel.preparationMl)
-                                .keyboardType(.decimalPad)
-                                .overlay(
-                                    HStack {
-                                        Spacer()
-                                        Text("mL")
-                                            .padding(.trailing, 10)
-                                    }, alignment: .trailing
-                                )
-                            
-                        } else {
-                            TextField("--", text: $viewModel.preparationMg)
-                                .keyboardType(.decimalPad)
-                                .overlay(
-                                    HStack {
-                                        Spacer()
-                                        Text("mg")
-                                            .padding(.trailing, 10)
-                                    }, alignment: .trailing
-                                )
-                                
+                        
+                        if viewModel.administrationRoute == .oral {
+                            Picker("Form", selection: $viewModel.medicationForm) {
+                                ForEach(MedicationForm.allCases) { form in
+                                    Text(form.rawValue).tag(form)
+                                }
+                            }
+                            .pickerStyle(SegmentedPickerStyle())
                         }
+                    }
+                }
+                
+                Section(header: Text("Preparation")){
+                    if viewModel.medicationForm == .liquid {
+                        
+                        TextField("--", text: $viewModel.preparationMg)
+                            .keyboardType(.decimalPad)
+                            .overlay(
+                                HStack {
+                                    Spacer()
+                                    Text("mg")
+                                        .padding(.trailing, 10)
+                                }, alignment: .trailing
+                            )
+                        TextField("--", text: $viewModel.preparationMl)
+                            .keyboardType(.decimalPad)
+                            .overlay(
+                                HStack {
+                                    Spacer()
+                                    Text("mL")
+                                        .padding(.trailing, 10)
+                                }, alignment: .trailing
+                            )
+                        
+                    } else {
+                        TextField("--", text: $viewModel.preparationMg)
+                            .keyboardType(.decimalPad)
+                            .overlay(
+                                HStack {
+                                    Spacer()
+                                    Text("mg")
+                                        .padding(.trailing, 10)
+                                }, alignment: .trailing
+                            )
+                        
                     }
                 }
                 
@@ -143,26 +156,13 @@ struct CalcGD_View: View {
                             )
                     }
                 }
-                
                 // Additional sections for preparation concentration and volume can be added here
             }
-            .navigationTitle("Dosage Calculator")
+            .navigationTitle("GD Calculator")
         }
+        
     }
-    
-}
-
-extension View {
-    @ViewBuilder func placeholder<Content: View>(
-        when shouldShow: Bool,
-        alignment: Alignment = .leading,
-        @ViewBuilder placeholder: () -> Content
-    ) -> some View {
-        ZStack(alignment: alignment) {
-            placeholder().opacity(shouldShow ? 1 : 0)
-            self
-        }
-    }
+        
 }
 
 struct CalcGDView_Previews: PreviewProvider {

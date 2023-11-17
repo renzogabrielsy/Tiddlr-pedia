@@ -12,15 +12,14 @@ struct Home: View {
         
         NavigationView {
             VStack{
-            NavigationLink(destination: CalcGD_View()) {
-                Text("GD Calculator")
-            }
-            NavigationLink(destination: CalcAD_View()) {
-                Text("Formula 2")
+                NavigationLink(destination: CalcGD_View()) {
+                    Text("GD Calculator")
+                }
+                NavigationLink(destination: CalcAD_View()) {
+                    Text("Formula 2")
+                }
             }
         }
-            }
-        
     }
 }
 
