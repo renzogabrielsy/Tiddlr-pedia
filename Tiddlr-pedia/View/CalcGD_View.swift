@@ -4,10 +4,8 @@ struct CalcGD_View: View {
     @StateObject var viewModel = GDCalc_ViewModel()
     
     var body: some View {
-        
         NavigationView {
             Form {
-                
                 Section(header: Text("Given Dose Range")) {
                     HStack {
                         if viewModel.administrationRoute == .intravenous {
@@ -239,7 +237,10 @@ struct CalcGD_View: View {
                 
                 // Additional sections for preparation concentration and volume can be added here
             }
-            .navigationTitle("Dosage Calculator")
+            .navigationTitle(
+                Text("GD Calculator")
+            )
+            .accentColor(.mint)
         }
     }
     
